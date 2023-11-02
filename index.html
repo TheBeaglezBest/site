@@ -66,3 +66,39 @@ I am currently attending 8th grade in Massachuessetts, USA.</p>
 	</div>
 </body>
 </html>
+<style>
+		body {
+			cursor: none;
+		}
+		.cursor {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #ff3c00;
+			animation: cursor 0.5s infinite alternate;
+			transform-origin: center;
+		}
+		@keyframes cursor {
+			from {
+				transform: scale(1);
+				opacity: 1;
+			}
+			to {
+				transform: scale(1.5);
+				opacity: 0.5;
+			}
+		}
+	</style>
+
+<body>
+	<div class="cursor"></div>
+	<script>
+		document.addEventListener("mousemove", function(e) {
+			var cursor = document.querySelector(".cursor");
+			cursor.style.left = e.pageX + "px";
+			cursor.style.top = e.pageY + "px";
+		});
+	</script>
+</body>
+
