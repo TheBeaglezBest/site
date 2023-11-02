@@ -1,51 +1,105 @@
-<title>Beaglez Doghouse</title>
-<style>
-	body {
-		background-image: url('https://i.pinimg.com/originals/08/d9/ef/08d9ef7723de602edefa8af825d9a1e2.gif');
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		font-family: Arial, sans-serif;
-		color: white;
-	}
-	h1 {
-		text-align: center;
-		font-size: 3rem;
-		margin-top: 50px;
-	}
-	.container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-top: 100px;
-	}
-	.about-me {
-		width: 50%;
-		padding: 20px;
-		background-color: rgba(0, 0, 0, 0.5);
-		border-radius: 10px;
-		margin-bottom: 50px;
-	}
-	.about-me h2 {
-		font-size: 2rem;
-		margin-bottom: 20px;
-	}
-	.about-me p {
-		font-size: 1.2rem;
-		line-height: 1.5;
-	}
-	.discord-logo {
-		width: 100px;
-		margin-bottom: 20px;
-	}
-	.name {
-		font-size: 1.5rem;
-		font-weight: bold;
-	}
-h3 {
-  text-align: center;
-}
-h4 {
-  text-align: center;
-}
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<title>Beaglez Doghouse</title>
+	<style>
+		body {
+			background-image: url('https://i.pinimg.com/originals/08/d9/ef/08d9ef7723de602edefa8af825d9a1e2.gif');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			font-family: Arial, sans-serif;
+			color: white;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			text-align: center;
+			font-size: 3rem;
+			margin-top: 50px;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 100px;
+			height: 100vh;
+			justify-content: center;
+		}
+		.about-me {
+			width: 50%;
+			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 10px;
+			margin-bottom: 50px;
+		}
+		.about-me h2 {
+			font-size: 2rem;
+			margin-bottom: 20px;
+		}
+		.about-me p {
+			font-size: 1.2rem;
+			line-height: 1.5;
+		}
+		.discord-logo {
+			width: 100px;
+			margin-bottom: 20px;
+		}
+		.name {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+		h3 {
+			text-align: center;
+		}
+		h4 {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Beaglez Doghouse</h1>
+	<div class="container">
+		<div class="about-me">
+			<h2>About Me</h2>
+			<p>Hi, I am Beaglez but my close friends call me Cooper. I am a developer and gamer. I enjoy martial arts and am currently a brown 2 belt. I also enjoy traveling and have been to Mexico, Honduras, Arizona, and Hawaii. I like to play video games (Minecraft) with my friends.
+				I am currently attending 8th grade in Massachusetts, USA.</p>
+		</div>
+		<h3>Contact</h3>
+		<h4>Discord: beaglez1</h4>
+	</div>
+	<div class="cursor"></div>
+	<script>
+		document.addEventListener("mousemove", function(e) {
+			var cursor = document.querySelector(".cursor");
+			cursor.style.left = e.pageX + "px";
+			cursor.style.top = e.pageY + "px";
+		});
+	</script>
+	<style>
+		body {
+			cursor: none;
+		}
+		.cursor {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #ff3c00;
+			animation: cursor 0.5s infinite alternate;
+			transform-origin: center;
+		}
+		@keyframes cursor {
+			from {
+				transform: scale(1);
+				opacity: 1;
+			}
+			to {
+				transform: scale(1.5);
+				opacity: 0.5;
+			}
+		}
+	</style>
+</body>
+</html>
